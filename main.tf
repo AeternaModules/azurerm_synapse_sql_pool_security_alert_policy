@@ -1,5 +1,5 @@
-resource "azurerm_synapse_sql_pool_security_alert_policy" "synapse_sql_pool_security_alert_policys" {
-  for_each = var.synapse_sql_pool_security_alert_policys
+resource "azurerm_synapse_sql_pool_security_alert_policy" "synapse_sql_pool_security_alert_policies" {
+  for_each = var.synapse_sql_pool_security_alert_policies
 
   policy_state                 = each.value.policy_state
   sql_pool_id                  = each.value.sql_pool_id
