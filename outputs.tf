@@ -1,3 +1,7 @@
+output "synapse_sql_pool_security_alert_policies_id" {
+  description = "Map of id values across all synapse_sql_pool_security_alert_policies, keyed the same as var.synapse_sql_pool_security_alert_policies"
+  value       = { for k, v in azurerm_synapse_sql_pool_security_alert_policy.synapse_sql_pool_security_alert_policies : k => v.id }
+}
 output "synapse_sql_pool_security_alert_policies_disabled_alerts" {
   description = "Map of disabled_alerts values across all synapse_sql_pool_security_alert_policies, keyed the same as var.synapse_sql_pool_security_alert_policies"
   value       = { for k, v in azurerm_synapse_sql_pool_security_alert_policy.synapse_sql_pool_security_alert_policies : k => v.disabled_alerts }
